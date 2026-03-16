@@ -182,6 +182,18 @@
 @layer utilites {}
 
 @layer specifics {
+  .hero {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .hero>img {
+    height: 10rem;
+    width: 10rem;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
   .main-links {
     display: grid;
     gap: 0.66rem;
