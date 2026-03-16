@@ -172,10 +172,10 @@
   }
 
   .section {
-    padding-block: 2rem;
+    padding-block: 1rem;
 
     @media (width > 760px) {
-      padding-block: 4rem;
+      padding-block: 2rem;
     }
   }
 
