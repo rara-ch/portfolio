@@ -193,6 +193,10 @@
     border-radius: 50%;
   }
 
+  .hero-text-content>* {
+    margin-block: 0.5rem;
+  }
+
   .main-navigation {
     background: var(--background-transparent);
     padding: 1rem 1rem;
