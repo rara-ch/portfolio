@@ -209,6 +209,16 @@
       "profile-pic title-location"
       "profile-pic main-links"
       "about about";
+
+    @media (width < 500px) {
+      grid-template-columns: auto;
+      grid-template-areas:
+        "name"
+        "profile-pic"
+        "main-links"
+        "title-location"
+        "about";
+    }
   }
 
   .profile-pic {
@@ -217,10 +227,18 @@
     width: 10rem;
     object-fit: cover;
     border-radius: 50%;
+
+    @media (width < 500px) {
+      justify-self: center;
+    }
   }
 
   .name {
     grid-area: name;
+
+    @media (width < 500px) {
+      justify-self: center;
+    }
   }
 
   .title-location {
@@ -233,6 +251,10 @@
     gap: 0.66rem;
     grid-template-columns: repeat(4, 1fr);
     max-inline-size: 225px;
+
+    @media (width < 500px) {
+      justify-self: center;
+    }
   }
 
   .main-links img {
