@@ -115,6 +115,7 @@
     /* semantics */
     --background-main: var(--clr-main-900);
     --background-card: var(--clr-main-700);
+    --background-transparent: hsl(0 0% 0% / 0%);
     --text-main: var(--clr-main-100);
     --highlight-main: var(--clr-main-300);
     --highlight-card: var(--clr-main-300);
@@ -190,6 +191,29 @@
     width: 10rem;
     object-fit: cover;
     border-radius: 50%;
+  }
+
+  .main-navigation {
+    background: var(--background-transparent);
+    padding: 1rem 1rem;
+    margin-block: 1rem;
+    border-radius: var(--border-radius-card);
+    transition: 0.3s;
+    font-weight: bold;
+
+    @media (width < 760px) {
+      background: var(--background-card);
+    }
+  }
+
+  .main-navigation:hover {
+    background: var(--background-card);
+  }
+
+  .main-navigation ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
   }
 
   .main-links {
