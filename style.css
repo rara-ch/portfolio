@@ -200,15 +200,48 @@
 
 @layer components {
   .hero {
-    display: flex;
+    display: grid;
     gap: 1rem;
+    align-items: center;
+    grid-template-columns: 10rem auto;
+    grid-template-areas:
+      "profile-pic name"
+      "profile-pic title-location"
+      "profile-pic main-links"
+      "about about";
   }
 
-  .hero>img {
+  .profile-pic {
+    grid-area: profile-pic;
     height: 10rem;
     width: 10rem;
     object-fit: cover;
     border-radius: 50%;
+  }
+
+  .name {
+    grid-area: name;
+  }
+
+  .title-location {
+    grid-area: title-location
+  }
+
+  .main-links {
+    grid-area: main-links;
+    display: grid;
+    gap: 0.66rem;
+    grid-template-columns: repeat(4, 1fr);
+    max-inline-size: 225px;
+  }
+
+  .main-links img {
+    max-inline-size: 20px;
+    max-block-size: 20px;
+  }
+
+  .about {
+    grid-area: about;
   }
 
   .main-navigation {
@@ -232,18 +265,6 @@
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
-  }
-
-  .main-links {
-    display: grid;
-    gap: 0.66rem;
-    grid-template-columns: repeat(4, 1fr);
-    max-inline-size: 225px;
-  }
-
-  .main-links img {
-    max-inline-size: 20px;
-    max-block-size: 20px;
   }
 
   .technologies {
