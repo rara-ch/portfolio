@@ -186,6 +186,10 @@
     transition: 0.1s;
     justify-self: center;
     align-self: center;
+
+    &[data-padding="small"] {
+      padding: 1em;
+    }
   }
 
   .svg-container:hover {
@@ -241,16 +245,9 @@
     max-inline-size: 225px;
   }
 
-  .main-links>div {
-    border-radius: var(--border-radius-card);
-    background: var(--background-card);
-    padding: 0.33rem;
-    transition: 0.1s;
-  }
-
-  .main-links>div:hover {
-    cursor: pointer;
-    background: var(--highlight-card);
+  .main-links img {
+    max-inline-size: 20px;
+    max-block-size: 20px;
   }
 
   .technologies {
