@@ -1,4 +1,4 @@
-@layer reset, base, layout, utilites, specifics;
+@layer reset, base, layout, components, utilites;
 
 @layer reset {
 
@@ -179,9 +179,7 @@
   }
 }
 
-@layer utilites {}
-
-@layer specifics {
+@layer components {
   .hero {
     display: flex;
     gap: 1rem;
@@ -213,3 +211,5 @@
     background: var(--highlight-card);
   }
 }
+
+@layer utilites {}
