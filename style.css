@@ -1,163 +1,187 @@
-@layer reset, base, utilites;
+@layer reset, base, utilites, specifics;
 
 @layer reset {
 
-    *,
-    *::before,
-    *::after {
-        box-sizing: border-box;
-    }
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
 
-    html {
-        -moz-text-size-adjust: none;
-        -webkit-text-size-adjust: none;
-        text-size-adjust: none;
-    }
+  html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+  }
 
-    body,
-    h1,
-    h2,
-    h3,
-    h4,
-    p,
-    figure,
-    blockquote,
-    dl,
-    dd {
-        margin: 0;
-    }
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  figure,
+  blockquote,
+  dl,
+  dd {
+    margin: 0;
+  }
 
-    ol,
-    ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
+  ol,
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
 
-    body {
-        min-block-size: 100vh;
-        line-height: 1.6;
-    }
+  body {
+    min-block-size: 100vh;
+    line-height: 1.6;
+  }
 
-    h1,
-    h2,
-    h3,
-    button,
-    input,
-    label {
-        line-height: 1.1;
-    }
+  h1,
+  h2,
+  h3,
+  button,
+  input,
+  label {
+    line-height: 1.1;
+  }
 
-    h1,
-    h2,
-    h3,
-    h4 {
-        text-wrap: balance;
-    }
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-wrap: balance;
+  }
 
-    p,
-    li {
-        text-wrap: pretty;
-    }
+  p,
+  li {
+    text-wrap: pretty;
+  }
 
-    img,
-    picture {
-        max-inline-size: 100%;
-        display: block;
-    }
+  img,
+  picture {
+    max-inline-size: 100%;
+    display: block;
+  }
 
-    input,
-    button,
-    textarea,
-    select {
-        font: inherit;
-    }
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
 }
 
 @layer base {
-    :root {
-        /* primitives */
-        --clr-main-100: hsl(75 6 87);
-        --clr-main-300: hsl(214 23 56);
-        --clr-main-500: hsl(212 29 36);
-        --clr-main-700: hsl(219 37 17);
-        --clr-main-900: hsl(211 53 11);
+  :root {
+    /* primitives */
+    --clr-main-100: hsl(75 6 87);
+    --clr-main-300: hsl(214 23 56);
+    --clr-main-500: hsl(212 29 36);
+    --clr-main-700: hsl(219 37 17);
+    --clr-main-900: hsl(211 53 11);
 
-        --br-1: 0.25rem;
-        --br-2: 0.5rem;
-        --br-3: 0.75rem;
+    --br-1: 0.5rem;
+    --br-2: 0.5rem;
+    --br-3: 1rem;
 
-        --ff-heading: "Oxygen Mono", monospace;
-        --ff-body: "Oxygen Mono", monospace;
+    --ff-heading: "Oxygen Mono", monospace;
+    --ff-body: "Oxygen Mono", monospace;
 
-        --fs-300: 0.875rem;
-        --fs-400: 1rem;
-        --fs-500: 1.125rem;
-        --fs-600: 1.25rem;
-        --fs-700: 1.5rem;
-        --fs-800: 2rem;
-        --fs-900: 3.75rem;
-        --fs-1000: 3.75rem;
+    --fs-300: 0.875rem;
+    --fs-400: 1rem;
+    --fs-500: 1.125rem;
+    --fs-600: 1.25rem;
+    --fs-700: 1.5rem;
+    --fs-800: 2rem;
+    --fs-900: 3.75rem;
+    --fs-1000: 3.75rem;
 
-        @media (width > 760px) {
-            --fs-300: 0.875;
-            --fs-400: 1rem;
-            --fs-500: 1.25rem;
-            --fs-600: 1.5rem;
-            --fs-700: 2rem;
-            --fs-800: 3rem;
-            --fs-900: 5rem;
-            --fs-1000: 7.5rem;
-        }
+    @media (width > 760px) {
+      --fs-300: 0.875;
+      --fs-400: 1rem;
+      --fs-500: 1.25rem;
+      --fs-600: 1.5rem;
+      --fs-700: 2rem;
+      --fs-800: 3rem;
+      --fs-900: 5rem;
+      --fs-1000: 7.5rem;
     }
+  }
 
-    :root {
-        /* semantics */
-        --background-main: var(--clr-main-900);
-        --text-main: var(--clr-main-100);
-        --highlight: var(--clr-main-300);
+  :root {
+    /* semantics */
+    --background-main: var(--clr-main-900);
+    --background-card: var(--clr-main-700);
+    --text-main: var(--clr-main-100);
+    --highlight-main: var(--clr-main-300);
+    --highlight-card: var(--clr-main-300);
+    --border-radius-card: var(--br-1);
 
-        --font-size-heading-sm: var(--fs-700);
-        --font-size-heading-rg: var(--fs-800);
-        --font-size-heading-lg: var(--fs-900);
-        --font-size-heading-xl: var(--fs-1000);
+    --font-size-heading-sm: var(--fs-700);
+    --font-size-heading-rg: var(--fs-800);
+    --font-size-heading-lg: var(--fs-900);
+    --font-size-heading-xl: var(--fs-1000);
 
-        --font-size-sm: var(--fs-300);
-        --font-size-rg: var(--fs-400);
-        --font-size-md: var(--fs-500);
-        --font-size-lg: var(--fs-600);
-    }
+    --font-size-sm: var(--fs-300);
+    --font-size-rg: var(--fs-400);
+    --font-size-md: var(--fs-500);
+    --font-size-lg: var(--fs-600);
+  }
 
-    html {
-        font-family: var(--ff-body);
-        line-height: 1.6;
-    }
+  html {
+    font-family: var(--ff-body);
+    line-height: 1.6;
+  }
 
-    body {
-        color: var(--text-main);
-        font-size: var(--font-size-rg);
-        background-color: var(--background-main);
-    }
+  body {
+    color: var(--text-main);
+    font-size: var(--font-size-rg);
+    background-color: var(--background-main);
+  }
 
-    h1,
-    h2,
-    h3,
-    h4 {
-        font-family: var(--ff-heading);
-    }
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--ff-heading);
+  }
 
-    h1 {
-        font-size: var(--font-size-heading-lg);
-    }
+  h1 {
+    font-size: var(--font-size-heading-lg);
+  }
 
-    a {
-        color: var(--text-main);
-    }
+  a {
+    color: var(--text-main);
+  }
 
-    a:hover,
-    a:focus-visible {
-        color: var(--highlight);
-    }
+  a:hover,
+  a:focus-visible {
+    color: var(--highlight-main);
+  }
 }
 
 @layer utilites {}
+
+@layer specifics {
+  .main-links {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    max-inline-size: 225px;
+  }
+
+  .main-links>div {
+    border-radius: var(--border-radius-card);
+    background: var(--background-card);
+    padding: 5px;
+    transition: 0.1s;
+  }
+
+  .main-links>div:hover {
+    cursor: pointer;
+    background: var(--highlight-card);
+  }
+}
