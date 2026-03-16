@@ -1,4 +1,4 @@
-@layer reset, base, utilites, specifics;
+@layer reset, base, layout, utilites, specifics;
 
 @layer reset {
 
@@ -160,6 +160,14 @@
   a:hover,
   a:focus-visible {
     color: var(--highlight-main);
+  }
+}
+
+@layer layout {
+  .wrapper {
+    max-width: 1000px;
+    margin-inline: auto;
+    padding-inline: 1rem;
   }
 }
 
