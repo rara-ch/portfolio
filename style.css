@@ -176,7 +176,7 @@
 @layer specifics {
   .main-links {
     display: grid;
-    gap: 10px;
+    gap: 0.66rem;
     grid-template-columns: repeat(4, 1fr);
     max-inline-size: 225px;
   }
@@ -184,7 +184,7 @@
   .main-links>div {
     border-radius: var(--border-radius-card);
     background: var(--background-card);
-    padding: 5px;
+    padding: 0.33rem;
     transition: 0.1s;
   }
 
