@@ -178,6 +178,20 @@
       padding-block: 4rem;
     }
   }
+
+  .svg-container {
+    border-radius: var(--border-radius-card);
+    background: var(--background-card);
+    padding: 3em;
+    transition: 0.1s;
+    justify-self: center;
+    align-self: center;
+  }
+
+  .svg-container:hover {
+    cursor: pointer;
+    background: var(--highlight-card);
+  }
 }
 
 @layer components {
@@ -238,6 +252,24 @@
     cursor: pointer;
     background: var(--highlight-card);
   }
+
+  .technologies {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .technologies img {
+    max-inline-size: 75px;
+    max-block-size: 75px;
+  }
 }
 
 @layer utilites {}
+
+article {
+  padding: 5rem;
+  background: red;
+  display: flex;
+}
