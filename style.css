@@ -1,3 +1,5 @@
+@layer reset, base, utilites;
+
 @layer reset {
 
     *,
@@ -72,6 +74,90 @@
     }
 }
 
-@layer base {}
+@layer base {
+    :root {
+        /* primitives */
+        --clr-main-100: hsl(75 6 87);
+        --clr-main-300: hsl(214 23 56);
+        --clr-main-500: hsl(212 29 36);
+        --clr-main-700: hsl(219 37 17);
+        --clr-main-900: hsl(211 53 11);
+
+        --br-1: 0.25rem;
+        --br-2: 0.5rem;
+        --br-3: 0.75rem;
+
+        --ff-heading: "Oxygen Mono", monospace;
+        --ff-body: "Oxygen Mono", monospace;
+
+        --fs-300: 0.875rem;
+        --fs-400: 1rem;
+        --fs-500: 1.125rem;
+        --fs-600: 1.25rem;
+        --fs-700: 1.5rem;
+        --fs-800: 2rem;
+        --fs-900: 3.75rem;
+        --fs-1000: 3.75rem;
+
+        @media (width > 760px) {
+            --fs-300: 0.875;
+            --fs-400: 1rem;
+            --fs-500: 1.25rem;
+            --fs-600: 1.5rem;
+            --fs-700: 2rem;
+            --fs-800: 3rem;
+            --fs-900: 5rem;
+            --fs-1000: 7.5rem;
+        }
+    }
+
+    :root {
+        /* semantics */
+        --background-main: var(--clr-main-900);
+        --text-main: var(--clr-main-100);
+        --highlight: var(--clr-main-300);
+
+        --font-size-heading-sm: var(--fs-700);
+        --font-size-heading-rg: var(--fs-800);
+        --font-size-heading-lg: var(--fs-900);
+        --font-size-heading-xl: var(--fs-1000);
+
+        --font-size-sm: var(--fs-300);
+        --font-size-rg: var(--fs-400);
+        --font-size-md: var(--fs-500);
+        --font-size-lg: var(--fs-600);
+    }
+
+    html {
+        font-family: var(--ff-body);
+        line-height: 1.6;
+    }
+
+    body {
+        color: var(--text-main);
+        font-size: var(--font-size-rg);
+        background-color: var(--background-main);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        font-family: var(--ff-heading);
+    }
+
+    h1 {
+        font-size: var(--font-size-heading-lg);
+    }
+
+    a {
+        color: var(--text-main);
+    }
+
+    a:hover,
+    a:focus-visible {
+        color: var(--highlight);
+    }
+}
 
 @layer utilites {}
