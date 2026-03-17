@@ -83,6 +83,9 @@
     --clr-main-700: hsl(219 37 17);
     --clr-main-900: hsl(211 53 11);
 
+    --clr-base-200: hsl(0 0 80%);
+    --clr-base-800: hsl(0 0 20%);
+
     --br-1: 0.5rem;
     --br-2: 0.5rem;
     --br-3: 1rem;
@@ -115,10 +118,14 @@
     /* semantics */
     --background-main: var(--clr-main-900);
     --background-card: var(--clr-main-700);
+    --background-tooltip: var(--clr-base-800);
+    --border-on-dark: var(--clr-base-200);
     --background-transparent: hsl(0 0% 0% / 0%);
     --text-main: var(--clr-main-100);
     --highlight-main: var(--clr-main-300);
     --highlight-card: var(--clr-main-300);
+
+
     --border-radius-card: var(--br-1);
 
     --font-size-heading-sm: var(--fs-700);
@@ -192,6 +199,7 @@
     transition: 0.1s;
     justify-self: center;
     align-self: center;
+    position: relative;
 
     &[data-padding="small"] {
       padding: 1em;
@@ -201,6 +209,33 @@
   .svg-container:hover {
     cursor: pointer;
     background: var(--highlight-card);
+  }
+
+  .tooltip {
+    position: absolute;
+    top: -1rem;
+    right: -2rem;
+    z-index: 1;
+    background: var(--background-tooltip);
+    padding: 0.25rem;
+    border-color: var(--border-on-dark);
+    border-style: solid;
+    border-width: 1px;
+    font-size: 0.8em;
+    border-radius: var(--br-2);
+    color: var(--text-main);
+    opacity: 0;
+
+    transition: 0.3s;
+
+    &[data-show="true"] {
+      opacity: 0.9;
+    }
+  }
+
+  .tooltip:hover {
+    pointer-events: none;
+    cursor: default;
   }
 }
 
