@@ -179,6 +179,12 @@
     }
   }
 
+  .auto-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(), 1fr));
+  }
+
   .svg-container {
     border-radius: var(--border-radius-card);
     background: var(--background-card);
@@ -287,6 +293,32 @@
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
+  }
+
+  .project-card {
+    background: var(--background-card);
+    border-radius: var(--border-radius-card);
+    padding: 1rem;
+  }
+
+  .project-card:hover {
+    background: var(--highlight-card);
+  }
+
+  .project-meta-info {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .project-icons {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .project-icons>img {
+    inline-size: 40px;
+    block-size: 40px;
   }
 
   .technologies {
