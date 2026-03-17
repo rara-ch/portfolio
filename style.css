@@ -357,6 +357,10 @@
   .project-meta-info {
     display: flex;
     justify-content: space-between;
+
+    @media (width < 500px) {
+      display: block;
+    }
   }
 
   .project-icons {
