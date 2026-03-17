@@ -182,7 +182,7 @@
   .svg-container {
     border-radius: var(--border-radius-card);
     background: var(--background-card);
-    padding: 3em;
+    padding: 2em;
     transition: 0.1s;
     justify-self: center;
     align-self: center;
