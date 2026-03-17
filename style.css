@@ -381,6 +381,19 @@
     max-inline-size: 75px;
     max-block-size: 75px;
   }
+
+  .scroll-to-top-button {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+
+    border-radius: 50%;
+  }
+
+  .scroll-to-top-button>img {
+    max-block-size: 2rem;
+    max-inline-size: 2rem;
+  }
 }
 
 @layer utilites {
