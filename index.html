@@ -158,32 +158,42 @@
 
     <section class="section">
       <h3>Technologies</h3>
-      <div class="technologies-filter-buttons">
-        <button>All</button>
-        <button>Languages</button>
-        <button>Frameworks</button>
-        <button>Databases</button>
-        <button>Development Tools</button>
+      <div id="technologies-filter-buttons" class="technologies-filter-buttons">
+        <button value="all">All</button>
+        <button value="languages">Languages</button>
+        <button value="frameworks">Frameworks</button>
+        <button value="databases">Databases</button>
+        <button value="devTools">Development Tools</button>
       </div>
-      <div class="technologies">
-        <div class="svg-container"><img src="assets/js_logo.svg" alt="JavaScript logo"></div>
-        <div class="svg-container"><img src="assets/python_logo.svg" alt="Python logo"></div>
-        <div class="svg-container"><img src="assets/go_logo.svg" alt="Golang logo"></div>
-        <div class="svg-container"><img src="assets/dart_logo.svg" alt="Dart logo"></div>
-        <div class="svg-container"><img src="assets/coldfusion_logo.svg" alt="ColdFusion logo"></div>
-        <div class="svg-container"><img src="assets/html_logo.svg" alt="HTML logo"></div>
-        <div class="svg-container"><img src="assets/css_logo.svg" alt="CSS logo"></div>
-        <div class="svg-container"><img src="assets/bootstrap_logo.svg" alt="Bootstrap logo"></div>
-        <div class="svg-container"><img src="assets/flutter_logo.svg" alt="Flutter logo"></div>
-        <div class="svg-container"><img src="assets/mssql_logo.svg" alt="Microsoft SQL Server logo"></div>
-        <div class="svg-container"><img src="assets/my_sql_logo.svg" alt="MySQL logo"></div>
-        <div class="svg-container"><img src="assets/postgres_logo.svg" alt="PostgresQL logo"></div>
-        <div class="svg-container"><img src="assets/postman_logo.svg" alt="Postman logo"></div>
-        <div class="svg-container"><img src="assets/linux_logo.svg" alt="Linux logo"></div>
-        <div class="svg-container"><img src="assets/windows_logo.svg" alt="Windows logo"></div>
-        <div class="svg-container"><img src="assets/vs_code_logo.svg" alt="VS Code logo"></div>
-        <div class="svg-container"><img src="assets/git_logo.svg" alt="Git logo"></div>
-        <div class="svg-container"><img src="assets/github_logo.svg" alt="GitHub logo"></div>
+      <div id="technologies" class="technologies">
+        <div id="javascript-technology-card" class="svg-container"><img src="assets/js_logo.svg" alt="JavaScript logo">
+        </div>
+        <div id="python-technology-card" class="svg-container"><img src="assets/python_logo.svg" alt="Python logo">
+        </div>
+        <div id="golang-technology-card" class="svg-container"><img src="assets/go_logo.svg" alt="Golang logo"></div>
+        <div id="dart-technology-card" class="svg-container"><img src="assets/dart_logo.svg" alt="Dart logo"></div>
+        <div id="coldfusion-technology-card" class="svg-container"><img src="assets/coldfusion_logo.svg"
+            alt="ColdFusion logo"></div>
+        <div id="html-technology-card" class="svg-container"><img src="assets/html_logo.svg" alt="HTML logo"></div>
+        <div id="css-technology-card" class="svg-container"><img src="assets/css_logo.svg" alt="CSS logo"></div>
+        <div id="bootstrap-technology-card" class="svg-container"><img src="assets/bootstrap_logo.svg"
+            alt="Bootstrap logo"></div>
+        <div id="flutter-technology-card" class="svg-container"><img src="assets/flutter_logo.svg" alt="Flutter logo">
+        </div>
+        <div id="microsoft-technology-card" class="svg-container"><img src="assets/mssql_logo.svg"
+            alt="Microsoft SQL Server logo"></div>
+        <div id="mysql-technology-card" class="svg-container"><img src="assets/my_sql_logo.svg" alt="MySQL logo"></div>
+        <div id="postgresql-technology-card" class="svg-container"><img src="assets/postgres_logo.svg"
+            alt="PostgresQL logo"></div>
+        <div id="postman-technology-card" class="svg-container"><img src="assets/postman_logo.svg" alt="Postman logo">
+        </div>
+        <div id="linux-technology-card" class="svg-container"><img src="assets/linux_logo.svg" alt="Linux logo"></div>
+        <div id="windows-technology-card" class="svg-container"><img src="assets/windows_logo.svg" alt="Windows logo">
+        </div>
+        <div id="vs-technology-card" class="svg-container"><img src="assets/vs_code_logo.svg" alt="VS Code logo"></div>
+        <div id="git-technology-card" class="svg-container"><img src="assets/git_logo.svg" alt="Git logo"></div>
+        <div id="github-technology-card" class="svg-container"><img src="assets/github_logo.svg" alt="GitHub logo">
+        </div>
       </div>
     </section>
 
@@ -203,3 +213,5 @@
 </body>
 
 </html>
+
+<script src="javascript/technology_filtering.js"></script>
