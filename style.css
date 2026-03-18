@@ -308,7 +308,7 @@
   }
 
   .title-location {
-    grid-area: title-location
+    grid-area: title-location;
   }
 
   .main-links {
