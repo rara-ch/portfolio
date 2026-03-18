@@ -249,9 +249,9 @@
     transition: 0.1s;
 
     &[data-selected="true"] {
-      border: auto;
-      border-color: var(--border-on-dark);
-      border-style: solid;
+      outline: auto;
+      outline-color: var(--border-on-dark);
+      outline-style: solid;
     }
   }
 
