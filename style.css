@@ -258,6 +258,10 @@
     cursor: pointer;
     background: var(--highlight-card);
   }
+
+  .list-info {
+    list-style: inside;
+  }
 }
 
 @layer components {
