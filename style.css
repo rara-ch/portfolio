@@ -249,7 +249,7 @@
     transition: 0.1s;
 
     &[data-selected="true"] {
-      outline: auto;
+      outline-width: 4px;
       outline-color: var(--border-on-dark);
       outline-style: solid;
     }
@@ -258,6 +258,11 @@
   .button:hover {
     cursor: pointer;
     background: var(--highlight-card);
+    scale: 1.1;
+  }
+
+  .button:active {
+    scale: 0.8;
   }
 
   .list-info {
