@@ -422,11 +422,17 @@
     bottom: 30px;
 
     border-radius: 50%;
+    opacity: 0;
+    transition: 0.6s ease;
   }
 
   .scroll-to-top-button>img {
     max-block-size: 2rem;
     max-inline-size: 2rem;
+  }
+
+  .scroll-to-top-button-animation {
+    opacity: 1;
   }
 }
 
