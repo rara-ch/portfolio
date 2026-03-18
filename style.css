@@ -406,6 +406,8 @@
   }
 
   .technologies-filter-buttons {
+    display: flex;
+    gap: 1rem;
     margin-block: 1rem;
   }
 
