@@ -192,7 +192,6 @@
     gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(min(), 1fr));
     margin-block-start: 1rem;
-    ;
   }
 
   .svg-container {
@@ -468,5 +467,9 @@
 
   .italic {
     font-style: italic;
+  }
+
+  .bold {
+    font-weight: bold;
   }
 }
