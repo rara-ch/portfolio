@@ -400,17 +400,15 @@
   }
 
   .technologies {
-    display: flex;
+    display: grid;
     gap: 16px;
-    flex-wrap: wrap;
-    justify-content: start;
-    min-block-size: 500px;
+    grid-template-columns: repeat(auto-fill, minmax(min(100px), 1fr));
+    min-block-size: 375px;
     align-content: start;
   }
 
   .technologies img {
-    max-inline-size: 75px;
-    max-block-size: 75px;
+    aspect-ratio: 1 / 1;
   }
 
   .scroll-to-top-button {
