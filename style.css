@@ -191,6 +191,8 @@
     display: grid;
     gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(min(), 1fr));
+    margin-block-start: 1rem;
+    ;
   }
 
   .svg-container {
@@ -369,17 +371,17 @@
     cursor: pointer;
   }
 
-  .project-card {
+  .card {
     background: var(--background-card);
     border-radius: var(--border-radius-card);
     padding: 1rem;
   }
 
-  .project-card:hover {
+  .card:hover {
     background: var(--highlight-card);
   }
 
-  .project-meta-info {
+  .card-meta-info {
     display: flex;
     justify-content: space-between;
 
@@ -462,5 +464,9 @@
 
   .font-size-lg {
     font-size: var(--font-size-lg);
+  }
+
+  .italic {
+    font-style: italic;
   }
 }
