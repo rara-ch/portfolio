@@ -403,7 +403,9 @@
     display: flex;
     gap: 16px;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: start;
+    min-block-size: 500px;
+    align-content: start;
   }
 
   .technologies img {
