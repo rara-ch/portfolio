@@ -118,6 +118,7 @@
     /* semantics */
     --background-main: var(--clr-main-900);
     --background-card: var(--clr-main-700);
+    --background-button: var(--clr-main-500);
     --background-tooltip: var(--clr-base-800);
     --border-on-dark: var(--clr-base-200);
     --background-transparent: hsl(0 0% 0% / 0%);
@@ -236,6 +237,26 @@
   .tooltip:hover {
     pointer-events: none;
     cursor: default;
+  }
+
+  .button {
+    background: var(--background-button);
+    color: var(--text-main);
+    border: none;
+    padding: 0.25rem 0.5rem;
+    border-radius: var(--br-1);
+    transition: 0.1s;
+
+    &[data-selected="true"] {
+      border: auto;
+      border-color: var(--border-on-dark);
+      border-style: solid;
+    }
+  }
+
+  .button:hover {
+    cursor: pointer;
+    background: var(--highlight-card);
   }
 }
 
@@ -372,6 +393,10 @@
   .project-icons>img {
     inline-size: 40px;
     block-size: 40px;
+  }
+
+  .technologies-filter-buttons {
+    margin-block: 1rem;
   }
 
   .technologies {

@@ -10,13 +10,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const filterButtons = document.getElementById('technologies-filter-buttons').children;
 
     for (let button of filterButtons) {
-        button.addEventListener('click', button => {
+        button.addEventListener('click', eventButton => {
             for (let technology of technologies) {
-                const buttonVal = button.target.value;
+                const buttonVal = eventButton.target.value;
                 if (buttonVal === 'all' || technologySets[buttonVal].has(technology.id)) {
                     technology.hidden = false;
                 } else {
                     technology.hidden = true;
+                }
+            }
+
+            for (const innerButton of filterButtons) {
+                if (innerButton === button) {
+                    innerButton.dataset.selected = 'true';
+                } else {
+                    innerButton.dataset.selected = 'false';
                 }
             }
         });
